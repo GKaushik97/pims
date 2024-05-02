@@ -1,0 +1,191 @@
+INFO - 2024-04-24 10:26:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 10:26:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 10:26:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 10:26:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 10:26:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 10:26:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 10:26:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 11:05:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 11:06:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 11:06:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 11:06:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 11:06:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 11:35:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 11:35:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 11:35:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 11:35:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 11:41:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 11:42:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 11:42:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 11:42:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 11:42:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-24 11:42:26 --> mysqli_sql_exception: Table 'pims.client' doesn't exist in /var/www/html/pims/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/pims/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/pims/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/pims/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/pims/system/Database/BaseBuilder.php(1699): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/pims/system/Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 /var/www/html/pims/app/Controllers/Home.php(34): CodeIgniter\Model->countAllResults()
+#6 /var/www/html/pims/system/CodeIgniter.php(942): App\Controllers\Home->index()
+#7 /var/www/html/pims/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/pims/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/pims/public/index.php(80): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-24 11:42:26 --> Table 'pims.client' doesn't exist
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1699): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 3 APPPATH/Controllers/Home.php(34): CodeIgniter\Model->countAllResults()
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+INFO - 2024-04-24 11:44:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-24 11:44:20 --> Invalid file: "pims/dashboard/dashboard.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Home.php(51): view()
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+INFO - 2024-04-24 11:45:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-24 11:45:03 --> Undefined variable: clients
+in APPPATH/Views/pims/dashboard/dashboard.php on line 18.
+ 1 APPPATH/Views/pims/dashboard/dashboard.php(18): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(228): include('/var/www/html/pims/app/Views/pims/dashboard/dashboard.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(51): view()
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+INFO - 2024-04-24 11:46:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 11:46:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 11:47:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 11:47:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-24 11:47:09 --> mysqli_sql_exception: Table 'pims.invoice' doesn't exist in /var/www/html/pims/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/pims/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/pims/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/pims/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/pims/system/Database/BaseBuilder.php(1699): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/pims/app/Models/InvoiceTracking/InvoiceModel.php(78): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 /var/www/html/pims/app/Controllers/InvoiceTracking/Invoice.php(62): App\Models\InvoiceTracking\InvoiceModel->getInvoicesCount()
+#6 /var/www/html/pims/system/CodeIgniter.php(942): App\Controllers\InvoiceTracking\Invoice->index()
+#7 /var/www/html/pims/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/pims/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/pims/public/index.php(80): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-24 11:47:09 --> Table 'pims.invoice' doesn't exist
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1699): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Models/InvoiceTracking/InvoiceModel.php(78): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 3 APPPATH/Controllers/InvoiceTracking/Invoice.php(62): App\Models\InvoiceTracking\InvoiceModel->getInvoicesCount()
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\InvoiceTracking\Invoice->index()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+INFO - 2024-04-24 12:01:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-24 12:01:39 --> mysqli_sql_exception: Table 'pims.invoice' doesn't exist in /var/www/html/pims/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/pims/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/pims/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/pims/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/pims/system/Database/BaseBuilder.php(1699): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/pims/app/Models/InvoiceTracking/InvoiceModel.php(78): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 /var/www/html/pims/app/Controllers/InvoiceTracking/Invoice.php(62): App\Models\InvoiceTracking\InvoiceModel->getInvoicesCount()
+#6 /var/www/html/pims/system/CodeIgniter.php(942): App\Controllers\InvoiceTracking\Invoice->index()
+#7 /var/www/html/pims/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/pims/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/pims/public/index.php(80): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-24 12:01:39 --> Table 'pims.invoice' doesn't exist
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1699): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Models/InvoiceTracking/InvoiceModel.php(78): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 3 APPPATH/Controllers/InvoiceTracking/Invoice.php(62): App\Models\InvoiceTracking\InvoiceModel->getInvoicesCount()
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\InvoiceTracking\Invoice->index()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+INFO - 2024-04-24 12:01:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 12:02:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 12:05:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 12:05:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 12:05:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-24 12:05:16 --> mysqli_sql_exception: Table 'pims.bg_type' doesn't exist in /var/www/html/pims/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/pims/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/pims/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/pims/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/pims/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/pims/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/pims/system/BaseModel.php(624): CodeIgniter\Model->doFindAll()
+#6 /var/www/html/pims/app/Controllers/InvoiceTracking/BankGuaranteeType.php(27): CodeIgniter\BaseModel->findAll()
+#7 /var/www/html/pims/system/CodeIgniter.php(942): App\Controllers\InvoiceTracking\BankGuaranteeType->index()
+#8 /var/www/html/pims/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#9 /var/www/html/pims/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/html/pims/public/index.php(80): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-24 12:05:16 --> Table 'pims.bg_type' doesn't exist
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll()
+ 4 APPPATH/Controllers/InvoiceTracking/BankGuaranteeType.php(27): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\InvoiceTracking\BankGuaranteeType->index()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+INFO - 2024-04-24 12:05:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 12:05:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 12:05:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 12:05:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-24 12:05:24 --> mysqli_sql_exception: Table 'pims.invoice' doesn't exist in /var/www/html/pims/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/pims/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/pims/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/pims/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/pims/system/Database/BaseBuilder.php(1699): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/pims/app/Models/InvoiceTracking/InvoiceModel.php(78): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 /var/www/html/pims/app/Controllers/InvoiceTracking/Invoice.php(62): App\Models\InvoiceTracking\InvoiceModel->getInvoicesCount()
+#6 /var/www/html/pims/system/CodeIgniter.php(942): App\Controllers\InvoiceTracking\Invoice->index()
+#7 /var/www/html/pims/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/pims/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/pims/public/index.php(80): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-24 12:05:24 --> Table 'pims.invoice' doesn't exist
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1699): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Models/InvoiceTracking/InvoiceModel.php(78): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 3 APPPATH/Controllers/InvoiceTracking/Invoice.php(62): App\Models\InvoiceTracking\InvoiceModel->getInvoicesCount()
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\InvoiceTracking\Invoice->index()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+INFO - 2024-04-24 12:05:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 12:12:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 12:12:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 12:12:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 12:12:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 12:12:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 12:12:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 12:12:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 12:12:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 12:12:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 12:12:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 12:12:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 12:12:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 12:12:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 12:12:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 12:12:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 12:12:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 12:12:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 12:12:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 12:12:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 12:12:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 12:13:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

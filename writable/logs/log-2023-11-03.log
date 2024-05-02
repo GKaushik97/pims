@@ -1,0 +1,609 @@
+CRITICAL - 2023-11-03 07:37:48 --> syntax error, unexpected '}'
+in APPPATH/Controllers/Home.php on line 10.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(900): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 07:41:17 --> Config\App::$baseURL is invalid.
+in SYSTEMPATH/HTTP/SiteURI.php on line 199.
+ 1 SYSTEMPATH/HTTP/SiteURI.php(145): CodeIgniter\HTTP\SiteURI->normalizeBaseURL()
+ 2 SYSTEMPATH/HTTP/SiteURI.php(100): CodeIgniter\HTTP\SiteURI->determineBaseURL()
+ 3 SYSTEMPATH/HTTP/SiteURIFactory.php(224): CodeIgniter\HTTP\SiteURI->__construct()
+ 4 SYSTEMPATH/HTTP/SiteURIFactory.php(45): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath()
+ 5 SYSTEMPATH/Config/Services.php(799): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+ 6 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::uri()
+ 7 SYSTEMPATH/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+ 8 SYSTEMPATH/Config/Services.php(792): CodeIgniter\Config\BaseService::getSharedInstance()
+ 9 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::uri()
+10 SYSTEMPATH/Config/Services.php(566): CodeIgniter\Config\BaseService::__callStatic()
+11 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::incomingrequest()
+12 SYSTEMPATH/Config/Services.php(524): CodeIgniter\Config\BaseService::__callStatic()
+13 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::request()
+14 SYSTEMPATH/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+15 SYSTEMPATH/Config/Services.php(559): CodeIgniter\Config\BaseService::getSharedInstance()
+16 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::incomingrequest()
+17 SYSTEMPATH/Config/Services.php(539): CodeIgniter\Config\BaseService::__callStatic()
+18 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::createRequest()
+19 SYSTEMPATH/CodeIgniter.php(655): CodeIgniter\Config\BaseService::__callStatic()
+20 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->getRequestObject()
+21 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 07:41:17 --> Uncaught CodeIgniter\Exceptions\ConfigException: Config\App::$baseURL is invalid. in /var/www/html/projectCms/system/HTTP/SiteURI.php:199
+Stack trace:
+#0 /var/www/html/projectCms/system/HTTP/SiteURI.php(145): CodeIgniter\HTTP\SiteURI->normalizeBaseURL()
+#1 /var/www/html/projectCms/system/HTTP/SiteURI.php(100): CodeIgniter\HTTP\SiteURI->determineBaseURL()
+#2 /var/www/html/projectCms/system/HTTP/SiteURIFactory.php(224): CodeIgniter\HTTP\SiteURI->__construct()
+#3 /var/www/html/projectCms/system/HTTP/SiteURIFactory.php(45): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath()
+#4 /var/www/html/projectCms/system/Config/Services.php(799): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+#5 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::uri()
+#6 /var/www/html/projectCms/system/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+#7 /var/www/html/projectCms/system/Config/Services.php(792): CodeIgniter\Config\BaseService::getSharedInstance()
+#8 
+【Previous Exception】
+CodeIgniter\Exceptions\ConfigException
+Config\App::$baseURL is invalid.
+#0 /var/www/html/projectCms/system/HTTP/SiteURI.php(145): CodeIgniter\HTTP\SiteURI->normalizeBaseURL()
+#1 /var/www/html/projectCms/system/HTTP/SiteURI.php(100): CodeIgniter\HTTP\SiteURI->determineBaseURL()
+#2 /var/www/html/projectCms/system/HTTP/SiteURIFactory.php(224): CodeIgniter\HTTP\SiteURI->__construct()
+#3 /var/www/html/projectCms/system/HTTP/SiteURIFactory.php(45): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath()
+#4 /var/www/html/projectCms/system/Config/Services.php(799): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+#5 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::uri()
+#6 /var/www/html/projectCms/system/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+#7 /var/www/html/projectCms/system/Config/Services.php(792): CodeIgniter\Config\BaseService::getSharedInstance()
+#8 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::uri()
+#9 /var/www/html/projectCms/system/Config/Services.php(566): CodeIgniter\Config\BaseService::__callStatic()
+#10 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::incomingrequest()
+#11 /var/www/html/projectCms/system/Config/Services.php(524): CodeIgniter\Config\BaseService::__callStatic()
+#12 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::request()
+#13 /var/www/html/projectCms/system/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+#14 /var/www/html/projectCms/system/Config/Services.php(559): CodeIgniter\Config\BaseService::getSharedInstance()
+#15 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::incomingrequest()
+#16 /var/www/html/projectCms/system/Config/Services.php(539): CodeIgniter\Config\BaseService::__callStatic()
+#17 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::createRequest()
+#18 /var/www/html/projectCms/system/CodeIgniter.php(655): CodeIgniter\Config\BaseService::__callStatic()
+#19 /var/www/html/projectCms/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->getRequestObject()
+#20 /var/www/html/projectCms/public/index.php(80): CodeIgniter\CodeIgniter->run()
+#21 {main}
+in SYSTEMPATH/HTTP/SiteURI.php on line 199.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-03 07:41:19 --> Config\App::$baseURL is invalid.
+in SYSTEMPATH/HTTP/SiteURI.php on line 199.
+ 1 SYSTEMPATH/HTTP/SiteURI.php(145): CodeIgniter\HTTP\SiteURI->normalizeBaseURL()
+ 2 SYSTEMPATH/HTTP/SiteURI.php(100): CodeIgniter\HTTP\SiteURI->determineBaseURL()
+ 3 SYSTEMPATH/HTTP/SiteURIFactory.php(224): CodeIgniter\HTTP\SiteURI->__construct()
+ 4 SYSTEMPATH/HTTP/SiteURIFactory.php(45): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath()
+ 5 SYSTEMPATH/Config/Services.php(799): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+ 6 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::uri()
+ 7 SYSTEMPATH/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+ 8 SYSTEMPATH/Config/Services.php(792): CodeIgniter\Config\BaseService::getSharedInstance()
+ 9 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::uri()
+10 SYSTEMPATH/Config/Services.php(566): CodeIgniter\Config\BaseService::__callStatic()
+11 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::incomingrequest()
+12 SYSTEMPATH/Config/Services.php(524): CodeIgniter\Config\BaseService::__callStatic()
+13 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::request()
+14 SYSTEMPATH/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+15 SYSTEMPATH/Config/Services.php(559): CodeIgniter\Config\BaseService::getSharedInstance()
+16 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::incomingrequest()
+17 SYSTEMPATH/Config/Services.php(539): CodeIgniter\Config\BaseService::__callStatic()
+18 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::createRequest()
+19 SYSTEMPATH/CodeIgniter.php(655): CodeIgniter\Config\BaseService::__callStatic()
+20 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->getRequestObject()
+21 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 07:41:19 --> Uncaught CodeIgniter\Exceptions\ConfigException: Config\App::$baseURL is invalid. in /var/www/html/projectCms/system/HTTP/SiteURI.php:199
+Stack trace:
+#0 /var/www/html/projectCms/system/HTTP/SiteURI.php(145): CodeIgniter\HTTP\SiteURI->normalizeBaseURL()
+#1 /var/www/html/projectCms/system/HTTP/SiteURI.php(100): CodeIgniter\HTTP\SiteURI->determineBaseURL()
+#2 /var/www/html/projectCms/system/HTTP/SiteURIFactory.php(224): CodeIgniter\HTTP\SiteURI->__construct()
+#3 /var/www/html/projectCms/system/HTTP/SiteURIFactory.php(45): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath()
+#4 /var/www/html/projectCms/system/Config/Services.php(799): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+#5 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::uri()
+#6 /var/www/html/projectCms/system/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+#7 /var/www/html/projectCms/system/Config/Services.php(792): CodeIgniter\Config\BaseService::getSharedInstance()
+#8 
+【Previous Exception】
+CodeIgniter\Exceptions\ConfigException
+Config\App::$baseURL is invalid.
+#0 /var/www/html/projectCms/system/HTTP/SiteURI.php(145): CodeIgniter\HTTP\SiteURI->normalizeBaseURL()
+#1 /var/www/html/projectCms/system/HTTP/SiteURI.php(100): CodeIgniter\HTTP\SiteURI->determineBaseURL()
+#2 /var/www/html/projectCms/system/HTTP/SiteURIFactory.php(224): CodeIgniter\HTTP\SiteURI->__construct()
+#3 /var/www/html/projectCms/system/HTTP/SiteURIFactory.php(45): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath()
+#4 /var/www/html/projectCms/system/Config/Services.php(799): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+#5 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::uri()
+#6 /var/www/html/projectCms/system/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+#7 /var/www/html/projectCms/system/Config/Services.php(792): CodeIgniter\Config\BaseService::getSharedInstance()
+#8 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::uri()
+#9 /var/www/html/projectCms/system/Config/Services.php(566): CodeIgniter\Config\BaseService::__callStatic()
+#10 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::incomingrequest()
+#11 /var/www/html/projectCms/system/Config/Services.php(524): CodeIgniter\Config\BaseService::__callStatic()
+#12 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::request()
+#13 /var/www/html/projectCms/system/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+#14 /var/www/html/projectCms/system/Config/Services.php(559): CodeIgniter\Config\BaseService::getSharedInstance()
+#15 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::incomingrequest()
+#16 /var/www/html/projectCms/system/Config/Services.php(539): CodeIgniter\Config\BaseService::__callStatic()
+#17 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::createRequest()
+#18 /var/www/html/projectCms/system/CodeIgniter.php(655): CodeIgniter\Config\BaseService::__callStatic()
+#19 /var/www/html/projectCms/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->getRequestObject()
+#20 /var/www/html/projectCms/public/index.php(80): CodeIgniter\CodeIgniter->run()
+#21 {main}
+in SYSTEMPATH/HTTP/SiteURI.php on line 199.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-03 07:41:21 --> Config\App::$baseURL is invalid.
+in SYSTEMPATH/HTTP/SiteURI.php on line 199.
+ 1 SYSTEMPATH/HTTP/SiteURI.php(145): CodeIgniter\HTTP\SiteURI->normalizeBaseURL()
+ 2 SYSTEMPATH/HTTP/SiteURI.php(100): CodeIgniter\HTTP\SiteURI->determineBaseURL()
+ 3 SYSTEMPATH/HTTP/SiteURIFactory.php(224): CodeIgniter\HTTP\SiteURI->__construct()
+ 4 SYSTEMPATH/HTTP/SiteURIFactory.php(45): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath()
+ 5 SYSTEMPATH/Config/Services.php(799): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+ 6 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::uri()
+ 7 SYSTEMPATH/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+ 8 SYSTEMPATH/Config/Services.php(792): CodeIgniter\Config\BaseService::getSharedInstance()
+ 9 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::uri()
+10 SYSTEMPATH/Config/Services.php(566): CodeIgniter\Config\BaseService::__callStatic()
+11 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::incomingrequest()
+12 SYSTEMPATH/Config/Services.php(524): CodeIgniter\Config\BaseService::__callStatic()
+13 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::request()
+14 SYSTEMPATH/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+15 SYSTEMPATH/Config/Services.php(559): CodeIgniter\Config\BaseService::getSharedInstance()
+16 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::incomingrequest()
+17 SYSTEMPATH/Config/Services.php(539): CodeIgniter\Config\BaseService::__callStatic()
+18 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::createRequest()
+19 SYSTEMPATH/CodeIgniter.php(655): CodeIgniter\Config\BaseService::__callStatic()
+20 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->getRequestObject()
+21 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 07:41:21 --> Uncaught CodeIgniter\Exceptions\ConfigException: Config\App::$baseURL is invalid. in /var/www/html/projectCms/system/HTTP/SiteURI.php:199
+Stack trace:
+#0 /var/www/html/projectCms/system/HTTP/SiteURI.php(145): CodeIgniter\HTTP\SiteURI->normalizeBaseURL()
+#1 /var/www/html/projectCms/system/HTTP/SiteURI.php(100): CodeIgniter\HTTP\SiteURI->determineBaseURL()
+#2 /var/www/html/projectCms/system/HTTP/SiteURIFactory.php(224): CodeIgniter\HTTP\SiteURI->__construct()
+#3 /var/www/html/projectCms/system/HTTP/SiteURIFactory.php(45): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath()
+#4 /var/www/html/projectCms/system/Config/Services.php(799): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+#5 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::uri()
+#6 /var/www/html/projectCms/system/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+#7 /var/www/html/projectCms/system/Config/Services.php(792): CodeIgniter\Config\BaseService::getSharedInstance()
+#8 
+【Previous Exception】
+CodeIgniter\Exceptions\ConfigException
+Config\App::$baseURL is invalid.
+#0 /var/www/html/projectCms/system/HTTP/SiteURI.php(145): CodeIgniter\HTTP\SiteURI->normalizeBaseURL()
+#1 /var/www/html/projectCms/system/HTTP/SiteURI.php(100): CodeIgniter\HTTP\SiteURI->determineBaseURL()
+#2 /var/www/html/projectCms/system/HTTP/SiteURIFactory.php(224): CodeIgniter\HTTP\SiteURI->__construct()
+#3 /var/www/html/projectCms/system/HTTP/SiteURIFactory.php(45): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath()
+#4 /var/www/html/projectCms/system/Config/Services.php(799): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+#5 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::uri()
+#6 /var/www/html/projectCms/system/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+#7 /var/www/html/projectCms/system/Config/Services.php(792): CodeIgniter\Config\BaseService::getSharedInstance()
+#8 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::uri()
+#9 /var/www/html/projectCms/system/Config/Services.php(566): CodeIgniter\Config\BaseService::__callStatic()
+#10 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::incomingrequest()
+#11 /var/www/html/projectCms/system/Config/Services.php(524): CodeIgniter\Config\BaseService::__callStatic()
+#12 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::request()
+#13 /var/www/html/projectCms/system/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+#14 /var/www/html/projectCms/system/Config/Services.php(559): CodeIgniter\Config\BaseService::getSharedInstance()
+#15 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::incomingrequest()
+#16 /var/www/html/projectCms/system/Config/Services.php(539): CodeIgniter\Config\BaseService::__callStatic()
+#17 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::createRequest()
+#18 /var/www/html/projectCms/system/CodeIgniter.php(655): CodeIgniter\Config\BaseService::__callStatic()
+#19 /var/www/html/projectCms/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->getRequestObject()
+#20 /var/www/html/projectCms/public/index.php(80): CodeIgniter\CodeIgniter->run()
+#21 {main}
+in SYSTEMPATH/HTTP/SiteURI.php on line 199.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-03 07:41:27 --> Config\App::$baseURL is invalid.
+in SYSTEMPATH/HTTP/SiteURI.php on line 199.
+ 1 SYSTEMPATH/HTTP/SiteURI.php(145): CodeIgniter\HTTP\SiteURI->normalizeBaseURL()
+ 2 SYSTEMPATH/HTTP/SiteURI.php(100): CodeIgniter\HTTP\SiteURI->determineBaseURL()
+ 3 SYSTEMPATH/HTTP/SiteURIFactory.php(224): CodeIgniter\HTTP\SiteURI->__construct()
+ 4 SYSTEMPATH/HTTP/SiteURIFactory.php(45): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath()
+ 5 SYSTEMPATH/Config/Services.php(799): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+ 6 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::uri()
+ 7 SYSTEMPATH/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+ 8 SYSTEMPATH/Config/Services.php(792): CodeIgniter\Config\BaseService::getSharedInstance()
+ 9 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::uri()
+10 SYSTEMPATH/Config/Services.php(566): CodeIgniter\Config\BaseService::__callStatic()
+11 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::incomingrequest()
+12 SYSTEMPATH/Config/Services.php(524): CodeIgniter\Config\BaseService::__callStatic()
+13 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::request()
+14 SYSTEMPATH/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+15 SYSTEMPATH/Config/Services.php(559): CodeIgniter\Config\BaseService::getSharedInstance()
+16 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::incomingrequest()
+17 SYSTEMPATH/Config/Services.php(539): CodeIgniter\Config\BaseService::__callStatic()
+18 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::createRequest()
+19 SYSTEMPATH/CodeIgniter.php(655): CodeIgniter\Config\BaseService::__callStatic()
+20 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->getRequestObject()
+21 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 07:41:27 --> Uncaught CodeIgniter\Exceptions\ConfigException: Config\App::$baseURL is invalid. in /var/www/html/projectCms/system/HTTP/SiteURI.php:199
+Stack trace:
+#0 /var/www/html/projectCms/system/HTTP/SiteURI.php(145): CodeIgniter\HTTP\SiteURI->normalizeBaseURL()
+#1 /var/www/html/projectCms/system/HTTP/SiteURI.php(100): CodeIgniter\HTTP\SiteURI->determineBaseURL()
+#2 /var/www/html/projectCms/system/HTTP/SiteURIFactory.php(224): CodeIgniter\HTTP\SiteURI->__construct()
+#3 /var/www/html/projectCms/system/HTTP/SiteURIFactory.php(45): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath()
+#4 /var/www/html/projectCms/system/Config/Services.php(799): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+#5 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::uri()
+#6 /var/www/html/projectCms/system/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+#7 /var/www/html/projectCms/system/Config/Services.php(792): CodeIgniter\Config\BaseService::getSharedInstance()
+#8 
+【Previous Exception】
+CodeIgniter\Exceptions\ConfigException
+Config\App::$baseURL is invalid.
+#0 /var/www/html/projectCms/system/HTTP/SiteURI.php(145): CodeIgniter\HTTP\SiteURI->normalizeBaseURL()
+#1 /var/www/html/projectCms/system/HTTP/SiteURI.php(100): CodeIgniter\HTTP\SiteURI->determineBaseURL()
+#2 /var/www/html/projectCms/system/HTTP/SiteURIFactory.php(224): CodeIgniter\HTTP\SiteURI->__construct()
+#3 /var/www/html/projectCms/system/HTTP/SiteURIFactory.php(45): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath()
+#4 /var/www/html/projectCms/system/Config/Services.php(799): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+#5 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::uri()
+#6 /var/www/html/projectCms/system/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+#7 /var/www/html/projectCms/system/Config/Services.php(792): CodeIgniter\Config\BaseService::getSharedInstance()
+#8 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::uri()
+#9 /var/www/html/projectCms/system/Config/Services.php(566): CodeIgniter\Config\BaseService::__callStatic()
+#10 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::incomingrequest()
+#11 /var/www/html/projectCms/system/Config/Services.php(524): CodeIgniter\Config\BaseService::__callStatic()
+#12 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::request()
+#13 /var/www/html/projectCms/system/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+#14 /var/www/html/projectCms/system/Config/Services.php(559): CodeIgniter\Config\BaseService::getSharedInstance()
+#15 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::incomingrequest()
+#16 /var/www/html/projectCms/system/Config/Services.php(539): CodeIgniter\Config\BaseService::__callStatic()
+#17 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::createRequest()
+#18 /var/www/html/projectCms/system/CodeIgniter.php(655): CodeIgniter\Config\BaseService::__callStatic()
+#19 /var/www/html/projectCms/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->getRequestObject()
+#20 /var/www/html/projectCms/public/index.php(80): CodeIgniter\CodeIgniter->run()
+#21 {main}
+in SYSTEMPATH/HTTP/SiteURI.php on line 199.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-03 07:41:28 --> Config\App::$baseURL is invalid.
+in SYSTEMPATH/HTTP/SiteURI.php on line 199.
+ 1 SYSTEMPATH/HTTP/SiteURI.php(145): CodeIgniter\HTTP\SiteURI->normalizeBaseURL()
+ 2 SYSTEMPATH/HTTP/SiteURI.php(100): CodeIgniter\HTTP\SiteURI->determineBaseURL()
+ 3 SYSTEMPATH/HTTP/SiteURIFactory.php(224): CodeIgniter\HTTP\SiteURI->__construct()
+ 4 SYSTEMPATH/HTTP/SiteURIFactory.php(45): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath()
+ 5 SYSTEMPATH/Config/Services.php(799): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+ 6 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::uri()
+ 7 SYSTEMPATH/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+ 8 SYSTEMPATH/Config/Services.php(792): CodeIgniter\Config\BaseService::getSharedInstance()
+ 9 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::uri()
+10 SYSTEMPATH/Config/Services.php(566): CodeIgniter\Config\BaseService::__callStatic()
+11 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::incomingrequest()
+12 SYSTEMPATH/Config/Services.php(524): CodeIgniter\Config\BaseService::__callStatic()
+13 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::request()
+14 SYSTEMPATH/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+15 SYSTEMPATH/Config/Services.php(559): CodeIgniter\Config\BaseService::getSharedInstance()
+16 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::incomingrequest()
+17 SYSTEMPATH/Config/Services.php(539): CodeIgniter\Config\BaseService::__callStatic()
+18 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::createRequest()
+19 SYSTEMPATH/CodeIgniter.php(655): CodeIgniter\Config\BaseService::__callStatic()
+20 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->getRequestObject()
+21 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 07:41:28 --> Uncaught CodeIgniter\Exceptions\ConfigException: Config\App::$baseURL is invalid. in /var/www/html/projectCms/system/HTTP/SiteURI.php:199
+Stack trace:
+#0 /var/www/html/projectCms/system/HTTP/SiteURI.php(145): CodeIgniter\HTTP\SiteURI->normalizeBaseURL()
+#1 /var/www/html/projectCms/system/HTTP/SiteURI.php(100): CodeIgniter\HTTP\SiteURI->determineBaseURL()
+#2 /var/www/html/projectCms/system/HTTP/SiteURIFactory.php(224): CodeIgniter\HTTP\SiteURI->__construct()
+#3 /var/www/html/projectCms/system/HTTP/SiteURIFactory.php(45): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath()
+#4 /var/www/html/projectCms/system/Config/Services.php(799): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+#5 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::uri()
+#6 /var/www/html/projectCms/system/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+#7 /var/www/html/projectCms/system/Config/Services.php(792): CodeIgniter\Config\BaseService::getSharedInstance()
+#8 
+【Previous Exception】
+CodeIgniter\Exceptions\ConfigException
+Config\App::$baseURL is invalid.
+#0 /var/www/html/projectCms/system/HTTP/SiteURI.php(145): CodeIgniter\HTTP\SiteURI->normalizeBaseURL()
+#1 /var/www/html/projectCms/system/HTTP/SiteURI.php(100): CodeIgniter\HTTP\SiteURI->determineBaseURL()
+#2 /var/www/html/projectCms/system/HTTP/SiteURIFactory.php(224): CodeIgniter\HTTP\SiteURI->__construct()
+#3 /var/www/html/projectCms/system/HTTP/SiteURIFactory.php(45): CodeIgniter\HTTP\SiteURIFactory->createURIFromRoutePath()
+#4 /var/www/html/projectCms/system/Config/Services.php(799): CodeIgniter\HTTP\SiteURIFactory->createFromGlobals()
+#5 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::uri()
+#6 /var/www/html/projectCms/system/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+#7 /var/www/html/projectCms/system/Config/Services.php(792): CodeIgniter\Config\BaseService::getSharedInstance()
+#8 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::uri()
+#9 /var/www/html/projectCms/system/Config/Services.php(566): CodeIgniter\Config\BaseService::__callStatic()
+#10 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::incomingrequest()
+#11 /var/www/html/projectCms/system/Config/Services.php(524): CodeIgniter\Config\BaseService::__callStatic()
+#12 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::request()
+#13 /var/www/html/projectCms/system/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+#14 /var/www/html/projectCms/system/Config/Services.php(559): CodeIgniter\Config\BaseService::getSharedInstance()
+#15 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::incomingrequest()
+#16 /var/www/html/projectCms/system/Config/Services.php(539): CodeIgniter\Config\BaseService::__callStatic()
+#17 /var/www/html/projectCms/system/Config/BaseService.php(258): CodeIgniter\Config\Services::createRequest()
+#18 /var/www/html/projectCms/system/CodeIgniter.php(655): CodeIgniter\Config\BaseService::__callStatic()
+#19 /var/www/html/projectCms/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->getRequestObject()
+#20 /var/www/html/projectCms/public/index.php(80): CodeIgniter\CodeIgniter->run()
+#21 {main}
+in SYSTEMPATH/HTTP/SiteURI.php on line 199.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-03 07:50:41 --> syntax error, unexpected '}'
+in APPPATH/Controllers/Home.php on line 10.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH/CodeIgniter.php(900): class_exists()
+ 6 SYSTEMPATH/CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 10:28:51 --> "Auth" filter must have a matching alias defined.
+in SYSTEMPATH/Filters/Filters.php on line 354.
+ 1 SYSTEMPATH/Filters/Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias()
+ 2 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 10:33:03 --> "Auth" filter must have a matching alias defined.
+in SYSTEMPATH/Filters/Filters.php on line 354.
+ 1 SYSTEMPATH/Filters/Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias()
+ 2 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 10:37:25 --> "Auth" filter must have a matching alias defined.
+in SYSTEMPATH/Filters/Filters.php on line 354.
+ 1 SYSTEMPATH/Filters/Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias()
+ 2 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 10:37:30 --> "Auth" filter must have a matching alias defined.
+in SYSTEMPATH/Filters/Filters.php on line 354.
+ 1 SYSTEMPATH/Filters/Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias()
+ 2 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 10:38:42 --> "Auth" filter must have a matching alias defined.
+in SYSTEMPATH/Filters/Filters.php on line 354.
+ 1 SYSTEMPATH/Filters/Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias()
+ 2 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 10:38:42 --> "Auth" filter must have a matching alias defined.
+in SYSTEMPATH/Filters/Filters.php on line 354.
+ 1 SYSTEMPATH/Filters/Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias()
+ 2 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 10:39:53 --> "Auth" filter must have a matching alias defined.
+in SYSTEMPATH/Filters/Filters.php on line 354.
+ 1 SYSTEMPATH/Filters/Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias()
+ 2 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 10:40:26 --> "Auth" filter must have a matching alias defined.
+in SYSTEMPATH/Filters/Filters.php on line 354.
+ 1 SYSTEMPATH/Filters/Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias()
+ 2 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 10:42:10 --> "Auth" filter must have a matching alias defined.
+in SYSTEMPATH/Filters/Filters.php on line 354.
+ 1 SYSTEMPATH/Filters/Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias()
+ 2 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 10:42:11 --> "Auth" filter must have a matching alias defined.
+in SYSTEMPATH/Filters/Filters.php on line 354.
+ 1 SYSTEMPATH/Filters/Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias()
+ 2 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 10:42:38 --> "Auth" filter must have a matching alias defined.
+in SYSTEMPATH/Filters/Filters.php on line 354.
+ 1 SYSTEMPATH/Filters/Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias()
+ 2 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 10:42:50 --> "Authf" filter must have a matching alias defined.
+in SYSTEMPATH/Filters/Filters.php on line 354.
+ 1 SYSTEMPATH/Filters/Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias()
+ 2 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 10:43:34 --> "Authf" filter must have a matching alias defined.
+in SYSTEMPATH/Filters/Filters.php on line 354.
+ 1 SYSTEMPATH/Filters/Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias()
+ 2 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 10:43:43 --> "Authf" filter must have a matching alias defined.
+in SYSTEMPATH/Filters/Filters.php on line 354.
+ 1 SYSTEMPATH/Filters/Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias()
+ 2 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 10:44:00 --> "Authf" filter must have a matching alias defined.
+in SYSTEMPATH/Filters/Filters.php on line 354.
+ 1 SYSTEMPATH/Filters/Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias()
+ 2 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 10:45:28 --> "Authf" filter must have a matching alias defined.
+in SYSTEMPATH/Filters/Filters.php on line 354.
+ 1 SYSTEMPATH/Filters/Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias()
+ 2 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 10:45:28 --> "Authf" filter must have a matching alias defined.
+in SYSTEMPATH/Filters/Filters.php on line 354.
+ 1 SYSTEMPATH/Filters/Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias()
+ 2 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 10:49:05 --> Class App\Filters\Authf cannot extend from interface CodeIgniter\Filters\FilterInterface
+in APPPATH/Filters/Authf.php on line 13.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-03 10:49:06 --> Class App\Filters\Authf cannot extend from interface CodeIgniter\Filters\FilterInterface
+in APPPATH/Filters/Authf.php on line 13.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-03 10:50:34 --> Class App\Filters\Authf contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (CodeIgniter\Filters\FilterInterface::after)
+in APPPATH/Filters/Authf.php on line 13.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-03 11:06:59 --> "Authf" filter must have a matching alias defined.
+in SYSTEMPATH/Filters/Filters.php on line 354.
+ 1 SYSTEMPATH/Filters/Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias()
+ 2 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilter()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 11:07:13 --> Class 'App\Filters\Auth' not found
+in SYSTEMPATH/Filters/Filters.php on line 177.
+ 1 SYSTEMPATH/CodeIgniter.php(474): CodeIgniter\Filters\Filters->run()
+ 2 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 3 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 11:59:07 --> Call to undefined function App\Filters\library()
+in APPPATH/Filters/Auth.php on line 17.
+ 1 SYSTEMPATH/Filters/Filters.php(186): App\Filters\Auth->before()
+ 2 SYSTEMPATH/CodeIgniter.php(474): CodeIgniter\Filters\Filters->run()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 12:00:14 --> Class 'App\Filters\CodeIgniter\Config\Factories' not found
+in APPPATH/Filters/Auth.php on line 17.
+ 1 SYSTEMPATH/Filters/Filters.php(186): App\Filters\Auth->before()
+ 2 SYSTEMPATH/CodeIgniter.php(474): CodeIgniter\Filters\Filters->run()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 12:00:39 --> Class 'App\Filters\CodeIgniter\Config\Factories' not found
+in APPPATH/Filters/Auth.php on line 18.
+ 1 SYSTEMPATH/Filters/Filters.php(186): App\Filters\Auth->before()
+ 2 SYSTEMPATH/CodeIgniter.php(474): CodeIgniter\Filters\Filters->run()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 12:00:55 --> Call to undefined function App\Filters\library()
+in APPPATH/Filters/Auth.php on line 17.
+ 1 SYSTEMPATH/Filters/Filters.php(186): App\Filters\Auth->before()
+ 2 SYSTEMPATH/CodeIgniter.php(474): CodeIgniter\Filters\Filters->run()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 12:02:29 --> Class 'App\Libraries\Authentication' not found
+in APPPATH/Filters/Auth.php on line 17.
+ 1 SYSTEMPATH/Filters/Filters.php(186): App\Filters\Auth->before()
+ 2 SYSTEMPATH/CodeIgniter.php(474): CodeIgniter\Filters\Filters->run()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 12:05:32 --> Class 'App\Filters\Authentication' not found
+in APPPATH/Filters/Auth.php on line 17.
+ 1 SYSTEMPATH/Filters/Filters.php(186): App\Filters\Auth->before()
+ 2 SYSTEMPATH/CodeIgniter.php(474): CodeIgniter\Filters\Filters->run()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 12:07:56 --> Call to a member function isUser() on null
+in APPPATH/Filters/Auth.php on line 18.
+ 1 SYSTEMPATH/Filters/Filters.php(186): App\Filters\Auth->before()
+ 2 SYSTEMPATH/CodeIgniter.php(474): CodeIgniter\Filters\Filters->run()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 12:08:37 --> Call to a member function isUser() on null
+in APPPATH/Filters/Auth.php on line 18.
+ 1 SYSTEMPATH/Filters/Filters.php(186): App\Filters\Auth->before()
+ 2 SYSTEMPATH/CodeIgniter.php(474): CodeIgniter\Filters\Filters->run()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 12:08:54 --> Call to a member function isUser() on null
+in APPPATH/Filters/Auth.php on line 18.
+ 1 SYSTEMPATH/Filters/Filters.php(186): App\Filters\Auth->before()
+ 2 SYSTEMPATH/CodeIgniter.php(474): CodeIgniter\Filters\Filters->run()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 12:09:02 --> Call to a member function isUser() on null
+in APPPATH/Filters/Auth.php on line 18.
+ 1 SYSTEMPATH/Filters/Filters.php(186): App\Filters\Auth->before()
+ 2 SYSTEMPATH/CodeIgniter.php(474): CodeIgniter\Filters\Filters->run()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 12:12:40 --> Cannot declare class Authentication because the name is already in use
+in APPPATH/Libraries/Authentication.php on line 8.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-03 12:12:41 --> Cannot declare class Authentication because the name is already in use
+in APPPATH/Libraries/Authentication.php on line 8.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-03 12:13:35 --> Class 'App\Filters\Authentication1' not found
+in APPPATH/Filters/Auth.php on line 17.
+ 1 SYSTEMPATH/Filters/Filters.php(186): App\Filters\Auth->before()
+ 2 SYSTEMPATH/CodeIgniter.php(474): CodeIgniter\Filters\Filters->run()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 12:13:43 --> Class 'App\Filters\Authentication1' not found
+in APPPATH/Filters/Auth.php on line 17.
+ 1 SYSTEMPATH/Filters/Filters.php(186): App\Filters\Auth->before()
+ 2 SYSTEMPATH/CodeIgniter.php(474): CodeIgniter\Filters\Filters->run()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 12:13:44 --> Class 'App\Filters\Authentication1' not found
+in APPPATH/Filters/Auth.php on line 17.
+ 1 SYSTEMPATH/Filters/Filters.php(186): App\Filters\Auth->before()
+ 2 SYSTEMPATH/CodeIgniter.php(474): CodeIgniter\Filters\Filters->run()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 12:13:54 --> Class 'App\Filters\Authentication1' not found
+in APPPATH/Filters/Auth.php on line 17.
+ 1 SYSTEMPATH/Filters/Filters.php(186): App\Filters\Auth->before()
+ 2 SYSTEMPATH/CodeIgniter.php(474): CodeIgniter\Filters\Filters->run()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 12:14:21 --> Class 'App\Libraries\Authentication1' not found
+in APPPATH/Filters/Auth.php on line 17.
+ 1 SYSTEMPATH/Filters/Filters.php(186): App\Filters\Auth->before()
+ 2 SYSTEMPATH/CodeIgniter.php(474): CodeIgniter\Filters\Filters->run()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 12:14:44 --> Cannot declare class Authentication1 because the name is already in use
+in APPPATH/Libraries/Authentication1.php on line 8.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-03 12:15:51 --> Cannot declare class Authentication because the name is already in use
+in APPPATH/Libraries/Authentication.php on line 8.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-03 12:15:52 --> Cannot declare class Authentication because the name is already in use
+in APPPATH/Libraries/Authentication.php on line 8.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-03 12:17:50 --> Cannot declare class Authentication because the name is already in use
+in APPPATH/Libraries/Authentication.php on line 8.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-03 12:17:51 --> Cannot declare class Authentication because the name is already in use
+in APPPATH/Libraries/Authentication.php on line 8.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-03 12:20:11 --> Object of class App\Libraries\Authentication could not be converted to string
+in APPPATH/Filters/Auth.php on line 18.
+ 1 SYSTEMPATH/Filters/Filters.php(186): App\Filters\Auth->before()
+ 2 SYSTEMPATH/CodeIgniter.php(474): CodeIgniter\Filters\Filters->run()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 12:38:12 --> Class 'BaseController' not found
+in APPPATH/Controllers/User.php on line 7.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(312): include_once()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 [internal function]: spl_autoload_call()
+ 6 SYSTEMPATH/CodeIgniter.php(900): class_exists()
+ 7 SYSTEMPATH/CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-03 12:41:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-03 12:42:06 --> Call to undefined function App\Libraries\library()
+in APPPATH/Libraries/Authentication.php on line 17.
+ 1 APPPATH/Filters/Auth.php(18): App\Libraries\Authentication->isUser()
+ 2 SYSTEMPATH/Filters/Filters.php(186): App\Filters\Auth->before()
+ 3 SYSTEMPATH/CodeIgniter.php(474): CodeIgniter\Filters\Filters->run()
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-03 12:42:07 --> Call to undefined function App\Libraries\library()
+in APPPATH/Libraries/Authentication.php on line 17.
+ 1 APPPATH/Filters/Auth.php(18): App\Libraries\Authentication->isUser()
+ 2 SYSTEMPATH/Filters/Filters.php(186): App\Filters\Auth->before()
+ 3 SYSTEMPATH/CodeIgniter.php(474): CodeIgniter\Filters\Filters->run()
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-03 12:42:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 12:43:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 12:43:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-03 12:43:45 --> syntax error, unexpected 'return' (T_RETURN)
+in APPPATH/Libraries/Authentication.php on line 20.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 APPPATH/Filters/Auth.php(17): spl_autoload_call()
+ 5 SYSTEMPATH/Filters/Filters.php(186): App\Filters\Auth->before()
+ 6 SYSTEMPATH/CodeIgniter.php(474): CodeIgniter\Filters\Filters->run()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-03 12:43:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 12:45:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 12:46:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 12:46:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 12:47:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 12:47:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

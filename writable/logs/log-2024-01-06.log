@@ -1,0 +1,450 @@
+INFO - 2024-01-06 06:43:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 06:43:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 06:43:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 06:43:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 06:43:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:07:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:07:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:07:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:07:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:07:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:07:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:18:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:18:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-06 09:18:30 --> mysqli_sql_exception: Incorrect DATE value: 'DATE(NOW + 10 DAY)' in /var/www/html/invoiceTracking/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/invoiceTracking/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/invoiceTracking/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/invoiceTracking/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/invoiceTracking/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/invoiceTracking/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/invoiceTracking/system/BaseModel.php(624): CodeIgniter\Model->doFindAll()
+#6 /var/www/html/invoiceTracking/app/Controllers/Cli/Bg.php(37): CodeIgniter\BaseModel->findAll()
+#7 /var/www/html/invoiceTracking/system/CodeIgniter.php(942): App\Controllers\Cli\Bg->reminder1()
+#8 /var/www/html/invoiceTracking/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#9 /var/www/html/invoiceTracking/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/html/invoiceTracking/public/index.php(80): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-01-06 09:18:30 --> Incorrect DATE value: 'DATE(NOW + 10 DAY)'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll()
+ 4 APPPATH/Controllers/Cli/Bg.php(37): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Cli\Bg->reminder1()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-06 09:18:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-06 09:18:44 --> mysqli_sql_exception: Incorrect DATE value: 'DATE(NOW() + 10 DAY)' in /var/www/html/invoiceTracking/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/invoiceTracking/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/invoiceTracking/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/invoiceTracking/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/invoiceTracking/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/invoiceTracking/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/invoiceTracking/system/BaseModel.php(624): CodeIgniter\Model->doFindAll()
+#6 /var/www/html/invoiceTracking/app/Controllers/Cli/Bg.php(37): CodeIgniter\BaseModel->findAll()
+#7 /var/www/html/invoiceTracking/system/CodeIgniter.php(942): App\Controllers\Cli\Bg->reminder1()
+#8 /var/www/html/invoiceTracking/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#9 /var/www/html/invoiceTracking/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/html/invoiceTracking/public/index.php(80): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-01-06 09:18:44 --> Incorrect DATE value: 'DATE(NOW() + 10 DAY)'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll()
+ 4 APPPATH/Controllers/Cli/Bg.php(37): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Cli\Bg->reminder1()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-06 09:18:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-06 09:18:45 --> mysqli_sql_exception: Incorrect DATE value: 'DATE(NOW() + 10 DAY)' in /var/www/html/invoiceTracking/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/invoiceTracking/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/invoiceTracking/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/invoiceTracking/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/invoiceTracking/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/invoiceTracking/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/invoiceTracking/system/BaseModel.php(624): CodeIgniter\Model->doFindAll()
+#6 /var/www/html/invoiceTracking/app/Controllers/Cli/Bg.php(37): CodeIgniter\BaseModel->findAll()
+#7 /var/www/html/invoiceTracking/system/CodeIgniter.php(942): App\Controllers\Cli\Bg->reminder1()
+#8 /var/www/html/invoiceTracking/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#9 /var/www/html/invoiceTracking/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/html/invoiceTracking/public/index.php(80): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-01-06 09:18:45 --> Incorrect DATE value: 'DATE(NOW() + 10 DAY)'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll()
+ 4 APPPATH/Controllers/Cli/Bg.php(37): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Cli\Bg->reminder1()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-06 09:19:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-06 09:19:02 --> mysqli_sql_exception: Incorrect DATE value: 'DATE(NOW() + INTERVAL 10 DAY)' in /var/www/html/invoiceTracking/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/invoiceTracking/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/invoiceTracking/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/invoiceTracking/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/invoiceTracking/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/invoiceTracking/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/invoiceTracking/system/BaseModel.php(624): CodeIgniter\Model->doFindAll()
+#6 /var/www/html/invoiceTracking/app/Controllers/Cli/Bg.php(37): CodeIgniter\BaseModel->findAll()
+#7 /var/www/html/invoiceTracking/system/CodeIgniter.php(942): App\Controllers\Cli\Bg->reminder1()
+#8 /var/www/html/invoiceTracking/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#9 /var/www/html/invoiceTracking/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/html/invoiceTracking/public/index.php(80): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-01-06 09:19:02 --> Incorrect DATE value: 'DATE(NOW() + INTERVAL 10 DAY)'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll()
+ 4 APPPATH/Controllers/Cli/Bg.php(37): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Cli\Bg->reminder1()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-06 09:19:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-06 09:19:03 --> mysqli_sql_exception: Incorrect DATE value: 'DATE(NOW() + INTERVAL 10 DAY)' in /var/www/html/invoiceTracking/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/invoiceTracking/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/invoiceTracking/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/invoiceTracking/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/invoiceTracking/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/invoiceTracking/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/invoiceTracking/system/BaseModel.php(624): CodeIgniter\Model->doFindAll()
+#6 /var/www/html/invoiceTracking/app/Controllers/Cli/Bg.php(37): CodeIgniter\BaseModel->findAll()
+#7 /var/www/html/invoiceTracking/system/CodeIgniter.php(942): App\Controllers\Cli\Bg->reminder1()
+#8 /var/www/html/invoiceTracking/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#9 /var/www/html/invoiceTracking/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/html/invoiceTracking/public/index.php(80): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-01-06 09:19:03 --> Incorrect DATE value: 'DATE(NOW() + INTERVAL 10 DAY)'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll()
+ 4 APPPATH/Controllers/Cli/Bg.php(37): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Cli\Bg->reminder1()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-06 09:19:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-06 09:19:44 --> mysqli_sql_exception: Incorrect DATE value: 'DATE(NOW() + INTERVAL 10 DAY)' in /var/www/html/invoiceTracking/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/invoiceTracking/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/invoiceTracking/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/invoiceTracking/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/invoiceTracking/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/invoiceTracking/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/invoiceTracking/system/BaseModel.php(624): CodeIgniter\Model->doFindAll()
+#6 /var/www/html/invoiceTracking/app/Controllers/Cli/Bg.php(37): CodeIgniter\BaseModel->findAll()
+#7 /var/www/html/invoiceTracking/system/CodeIgniter.php(942): App\Controllers\Cli\Bg->reminder1()
+#8 /var/www/html/invoiceTracking/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#9 /var/www/html/invoiceTracking/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/html/invoiceTracking/public/index.php(80): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-01-06 09:19:44 --> Incorrect DATE value: 'DATE(NOW() + INTERVAL 10 DAY)'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll()
+ 4 APPPATH/Controllers/Cli/Bg.php(37): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Cli\Bg->reminder1()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-06 09:19:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-06 09:19:55 --> mysqli_sql_exception: Incorrect DATE value: 'NOW() + INTERVAL 10 DAY' in /var/www/html/invoiceTracking/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/invoiceTracking/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/invoiceTracking/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/invoiceTracking/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/invoiceTracking/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/invoiceTracking/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/invoiceTracking/system/BaseModel.php(624): CodeIgniter\Model->doFindAll()
+#6 /var/www/html/invoiceTracking/app/Controllers/Cli/Bg.php(37): CodeIgniter\BaseModel->findAll()
+#7 /var/www/html/invoiceTracking/system/CodeIgniter.php(942): App\Controllers\Cli\Bg->reminder1()
+#8 /var/www/html/invoiceTracking/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#9 /var/www/html/invoiceTracking/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/html/invoiceTracking/public/index.php(80): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-01-06 09:19:55 --> Incorrect DATE value: 'NOW() + INTERVAL 10 DAY'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll()
+ 4 APPPATH/Controllers/Cli/Bg.php(37): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Cli\Bg->reminder1()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-06 09:19:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-06 09:19:56 --> mysqli_sql_exception: Incorrect DATE value: 'NOW() + INTERVAL 10 DAY' in /var/www/html/invoiceTracking/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/invoiceTracking/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/invoiceTracking/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/invoiceTracking/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/invoiceTracking/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/invoiceTracking/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/invoiceTracking/system/BaseModel.php(624): CodeIgniter\Model->doFindAll()
+#6 /var/www/html/invoiceTracking/app/Controllers/Cli/Bg.php(37): CodeIgniter\BaseModel->findAll()
+#7 /var/www/html/invoiceTracking/system/CodeIgniter.php(942): App\Controllers\Cli\Bg->reminder1()
+#8 /var/www/html/invoiceTracking/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#9 /var/www/html/invoiceTracking/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/html/invoiceTracking/public/index.php(80): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-01-06 09:19:56 --> Incorrect DATE value: 'NOW() + INTERVAL 10 DAY'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll()
+ 4 APPPATH/Controllers/Cli/Bg.php(37): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Cli\Bg->reminder1()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-06 09:22:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-06 09:22:02 --> date() expects parameter 2 to be int, string given
+in APPPATH/Controllers/Cli/Bg.php on line 37.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Cli/Bg.php(37): date()
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Cli\Bg->reminder1()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-06 09:22:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-06 09:22:19 --> mysqli_sql_exception: Incorrect DATE value: '2024-01-06  + 10 06am2419' in /var/www/html/invoiceTracking/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/invoiceTracking/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /var/www/html/invoiceTracking/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/invoiceTracking/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/invoiceTracking/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/invoiceTracking/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/invoiceTracking/system/BaseModel.php(624): CodeIgniter\Model->doFindAll()
+#6 /var/www/html/invoiceTracking/app/Controllers/Cli/Bg.php(38): CodeIgniter\BaseModel->findAll()
+#7 /var/www/html/invoiceTracking/system/CodeIgniter.php(942): App\Controllers\Cli\Bg->reminder1()
+#8 /var/www/html/invoiceTracking/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#9 /var/www/html/invoiceTracking/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/html/invoiceTracking/public/index.php(80): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-01-06 09:22:19 --> Incorrect DATE value: '2024-01-06  + 10 06am2419'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll()
+ 4 APPPATH/Controllers/Cli/Bg.php(38): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Cli\Bg->reminder1()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-06 09:22:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:22:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:25:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-06 09:25:32 --> Invalid file: "cli/bg/reminder.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Cli/Bg.php(41): view()
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Cli\Bg->reminder1()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-06 09:25:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:25:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:25:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-06 09:25:47 --> Invalid file: "cli/bg/reminder.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Cli/Bg.php(41): view()
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Cli\Bg->reminder1()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-06 09:29:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-06 09:29:20 --> Invalid file: "cli/bg/reminder.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/InvoiceTracking/Cli/Bg.php(41): view()
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\InvoiceTracking\Cli\Bg->reminder1()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-06 09:29:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-06 09:29:20 --> Invalid file: "cli/bg/reminder.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/InvoiceTracking/Cli/Bg.php(41): view()
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\InvoiceTracking\Cli\Bg->reminder1()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-06 09:31:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:36:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-06 09:36:30 --> syntax error, unexpected end of file
+in APPPATH/Views/invoice_tracking/cli/bg/reminder_mail_body.php on line 39.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/InvoiceTracking/Cli/Bg.php(41): view()
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\InvoiceTracking\Cli\Bg->reminder1()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-06 09:37:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:37:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:37:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:37:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:38:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:38:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:38:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:38:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:39:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:39:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:39:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:39:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:39:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:39:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:40:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:40:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:40:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:40:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:40:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:40:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:40:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:40:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:41:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:41:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:41:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:41:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:42:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:42:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 09:42:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 10:02:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-06 10:02:28 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2024-01-06 10:02:28 --> 
+INFO - 2024-01-06 10:11:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-06 10:12:04 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): unable to connect to mn-ssl.de:25 (Connection timed out) in /var/www/html/invoiceTracking/system/Email/Email.php:1891
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoiceTracking/system/Email/Email.php(1891): fsockopen()
+#2 /var/www/html/invoiceTracking/system/Email/Email.php(1799): CodeIgniter\Email\Email->SMTPConnect()
+#3 /var/www/html/invoiceTracking/system/Email/Email.php(1684): CodeIgniter\Email\Email->sendWithSmtp()
+#4 /var/www/html/invoiceTracking/system/Email/Email.php(1578): CodeIgniter\Email\Email->spoolEmail()
+#5 /var/www/html/invoiceTracking/app/Controllers/InvoiceTracking/Cli/Bg.php(61): CodeIgniter\Email\Email->send()
+#6 /var/www/html/invoiceTracking/system/CodeIgniter.php(942): App\Controllers\InvoiceTracking\Cli\Bg->reminder1()
+#7 /var/www/html/invoiceTracking/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoiceTracking/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoiceTracking/public/index.php(80): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2024-01-06 10:12:04 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-01-06 10:12:04 --> 
+INFO - 2024-01-06 10:13:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 10:13:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 10:28:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-06 10:28:22 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): unable to connect to mn-ssl.de:25 (Connection timed out) in /var/www/html/invoiceTracking/system/Email/Email.php:1891
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoiceTracking/system/Email/Email.php(1891): fsockopen()
+#2 /var/www/html/invoiceTracking/system/Email/Email.php(1799): CodeIgniter\Email\Email->SMTPConnect()
+#3 /var/www/html/invoiceTracking/system/Email/Email.php(1684): CodeIgniter\Email\Email->sendWithSmtp()
+#4 /var/www/html/invoiceTracking/system/Email/Email.php(1578): CodeIgniter\Email\Email->spoolEmail()
+#5 /var/www/html/invoiceTracking/app/Controllers/InvoiceTracking/Cli/Bg.php(60): CodeIgniter\Email\Email->send()
+#6 /var/www/html/invoiceTracking/system/CodeIgniter.php(942): App\Controllers\InvoiceTracking\Cli\Bg->reminder1()
+#7 /var/www/html/invoiceTracking/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoiceTracking/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoiceTracking/public/index.php(80): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2024-01-06 10:28:22 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-01-06 10:28:22 --> 
+CRITICAL - 2024-01-06 10:28:22 --> Call to undefined function App\Controllers\InvoiceTracking\Cli\printDebugger()
+in APPPATH/Controllers/InvoiceTracking/Cli/Bg.php on line 66.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\InvoiceTracking\Cli\Bg->reminder1()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-06 10:29:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-06 10:29:09 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): unable to connect to mn-ssl.de:25 (Connection timed out) in /var/www/html/invoiceTracking/system/Email/Email.php:1891
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoiceTracking/system/Email/Email.php(1891): fsockopen()
+#2 /var/www/html/invoiceTracking/system/Email/Email.php(1799): CodeIgniter\Email\Email->SMTPConnect()
+#3 /var/www/html/invoiceTracking/system/Email/Email.php(1684): CodeIgniter\Email\Email->sendWithSmtp()
+#4 /var/www/html/invoiceTracking/system/Email/Email.php(1578): CodeIgniter\Email\Email->spoolEmail()
+#5 /var/www/html/invoiceTracking/app/Controllers/InvoiceTracking/Cli/Bg.php(60): CodeIgniter\Email\Email->send()
+#6 /var/www/html/invoiceTracking/system/CodeIgniter.php(942): App\Controllers\InvoiceTracking\Cli\Bg->reminder1()
+#7 /var/www/html/invoiceTracking/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoiceTracking/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoiceTracking/public/index.php(80): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2024-01-06 10:29:09 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-01-06 10:29:09 --> 
+INFO - 2024-01-06 10:29:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-06 10:29:26 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): unable to connect to mn-ssl.de:25 (Connection timed out) in /var/www/html/invoiceTracking/system/Email/Email.php:1891
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoiceTracking/system/Email/Email.php(1891): fsockopen()
+#2 /var/www/html/invoiceTracking/system/Email/Email.php(1799): CodeIgniter\Email\Email->SMTPConnect()
+#3 /var/www/html/invoiceTracking/system/Email/Email.php(1684): CodeIgniter\Email\Email->sendWithSmtp()
+#4 /var/www/html/invoiceTracking/system/Email/Email.php(1578): CodeIgniter\Email\Email->spoolEmail()
+#5 /var/www/html/invoiceTracking/app/Controllers/InvoiceTracking/Cli/Bg.php(60): CodeIgniter\Email\Email->send()
+#6 /var/www/html/invoiceTracking/system/CodeIgniter.php(942): App\Controllers\InvoiceTracking\Cli\Bg->reminder1()
+#7 /var/www/html/invoiceTracking/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoiceTracking/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoiceTracking/public/index.php(80): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2024-01-06 10:29:26 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-01-06 10:29:26 --> 
+INFO - 2024-01-06 10:30:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 10:30:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-06 10:30:57 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): unable to connect to mn-ssl.de:25 (Connection timed out) in /var/www/html/invoiceTracking/system/Email/Email.php:1891
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoiceTracking/system/Email/Email.php(1891): fsockopen()
+#2 /var/www/html/invoiceTracking/system/Email/Email.php(1799): CodeIgniter\Email\Email->SMTPConnect()
+#3 /var/www/html/invoiceTracking/system/Email/Email.php(1684): CodeIgniter\Email\Email->sendWithSmtp()
+#4 /var/www/html/invoiceTracking/system/Email/Email.php(1578): CodeIgniter\Email\Email->spoolEmail()
+#5 /var/www/html/invoiceTracking/app/Controllers/InvoiceTracking/Cli/Bg.php(60): CodeIgniter\Email\Email->send()
+#6 /var/www/html/invoiceTracking/system/CodeIgniter.php(942): App\Controllers\InvoiceTracking\Cli\Bg->reminder1()
+#7 /var/www/html/invoiceTracking/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoiceTracking/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoiceTracking/public/index.php(80): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2024-01-06 10:30:57 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-01-06 10:30:57 --> 
+INFO - 2024-01-06 11:11:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 11:11:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 11:11:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 11:11:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 11:11:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 11:11:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 11:11:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 11:12:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 11:12:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 11:12:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 11:13:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-06 12:30:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-06 12:30:28 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): unable to connect to mn-ssl.de:25 (Connection timed out) in /var/www/html/invoiceTracking/system/Email/Email.php:1891
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoiceTracking/system/Email/Email.php(1891): fsockopen()
+#2 /var/www/html/invoiceTracking/system/Email/Email.php(1799): CodeIgniter\Email\Email->SMTPConnect()
+#3 /var/www/html/invoiceTracking/system/Email/Email.php(1684): CodeIgniter\Email\Email->sendWithSmtp()
+#4 /var/www/html/invoiceTracking/system/Email/Email.php(1578): CodeIgniter\Email\Email->spoolEmail()
+#5 /var/www/html/invoiceTracking/app/Controllers/InvoiceTracking/Cli/Bg.php(61): CodeIgniter\Email\Email->send()
+#6 /var/www/html/invoiceTracking/system/CodeIgniter.php(942): App\Controllers\InvoiceTracking\Cli\Bg->reminder1()
+#7 /var/www/html/invoiceTracking/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoiceTracking/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoiceTracking/public/index.php(80): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2024-01-06 12:30:28 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-01-06 12:30:28 --> 
