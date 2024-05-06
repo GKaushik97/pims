@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 /**
- * Home controller
+ * Home controller For the Dashboard
  */
 class Home extends BaseController
 {
