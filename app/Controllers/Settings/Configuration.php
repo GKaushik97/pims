@@ -2,7 +2,7 @@
 namespace App\Controllers\Settings;
 use App\Controllers\BaseController;
 /**
- * Modules 
+ * Modules For the Configuration
  */
 class Configuration extends BaseController
 {
