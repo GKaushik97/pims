@@ -11,6 +11,9 @@ class Configuration extends BaseController
 	 */ 
 	public function index()
 	{
+		/**
+		 * This is for the Configuration Module.
+		 */ 
 		$data['page'] = array(
             'title' => 'Configuration Details',
             'page_title' => 'Configuration Details',
