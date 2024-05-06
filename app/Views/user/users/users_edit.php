@@ -7,6 +7,7 @@ $name_val = isset($user_details['name']) ? $user_details['name'] : set_value('na
 $email_val = isset($user_details['email']) ? $user_details['email'] : set_value('email');
 $phone_val = isset($user_details['phone']) ? $user_details['phone'] : set_value('phone');
 $role_val = isset($user_details['role']) ? $user_details['role'] : set_value('role');
+$user_type_val = isset($_POST['user_type']) ? $_POST['user_type'] : set_value('user_type');
 ?>
 <div class="modal-dialog modal-lg">
 	<div class="modal-content">

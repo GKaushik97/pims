@@ -12,7 +12,7 @@ class EDMSDocumentsModel extends Model
 	protected $primaryKey = 'id';
 	protected $useAutoIncrement = true;
 	protected $returnType = 'array';
-	protected $useSoftDeletes = false;
+	protected $useSoftDeletes = true;
 	protected $allowedFields = array(
 		'code',
 		'document',
@@ -83,6 +83,7 @@ class EDMSDocumentsModel extends Model
 		$this->builder->join('document_status ds1', 'ds1.id = ed.approve_status', 'LEFT');
 		if(isset($params['keywords']) and !empty($params['keywords'])) {
 			$this->builder->like('ed.code', $params['keywords']);
+			$this->builder->orLike('edr.version_number', $params['keywords']);
 		}
 	}
 

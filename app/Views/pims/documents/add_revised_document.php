@@ -3,6 +3,8 @@
  * Verify Status
  */ 
 $id_val = isset($id) ? $id : '';
+$origin_ext = json_decode(ORIGIN,true);
+
 ?>
 <div class="modal-dialog modal-xl">
 	<div class="modal-content">
@@ -14,6 +16,16 @@ $id_val = isset($id) ? $id : '';
             	<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			</div>
 			<div class="modal-body">
+                <div class="row mb-3">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <label class="form-label text-dark">Document Code</label>
+                        <div><?= $revision_document['code']; ?></div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <label class="form-label text-dark">Origin</label>
+                        <div><?= $origin_ext[$revision_document['origin']]; ?></div>
+                    </div>
+                </div>
                 <div class="row mb-3">
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <label class="form-label text-dark">Project</label>
@@ -40,6 +52,26 @@ $id_val = isset($id) ? $id : '';
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <label class="form-label text-dark">Version Number</label>
                         <div><?= $revision_document['version_number']; ?></div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <label class="form-label text-dark">Added Date</label>
+                        <div><?= displayDate($revision_document['created_at']); ?></div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <label class="form-label text-dark">Added By</label>
+                        <div><?= $revision_document['username']; ?></div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <label class="form-label text-dark">Updated Date</label>
+                        <div><?= displayDate($revision_document['updated_at']); ?></div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <label class="form-label text-dark">Updated By</label>
+                        <div><?= $revision_document['update_name']; ?></div>
                     </div>
                 </div>
                 <div class="hr1"></div>

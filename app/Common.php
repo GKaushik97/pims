@@ -15,3 +15,21 @@
  */
 $origin = array('1' => 'Internal', '2' => 'DEC');
 define('ORIGIN', json_encode($origin));
+
+
+function displayFile($file_name) {
+	$substr = substr($file_name, -3);
+	$icons = array(
+		'pdf' => 'bi bi-filetype-pdf',
+		'doc' => 'bi-file-word',
+		'ocx' => 'bi-file-word',
+		'png' => 'bi-file-image',
+		'jpg' => 'bi-file-image',
+		'peg' => 'bi-file-image',
+	);
+	if(in_array($icons[$substr], $icons)) { ?>
+		<a href="<?= WEBROOT; ?>edms_docs/<? echo $file_name; ?>" target="_blank" title="<?= $file_name; ?>"><i class="<?= $icons[$substr]; ?>"></i></a>
+	<? }else { ?>
+		<a href="<?= WEBROOT; ?>edms_docs/<? echo $file_name; ?>" target="_blank" title="<?= $file_name; ?>"><i class="bi-file"></i></a>
+	<? }
+}?>

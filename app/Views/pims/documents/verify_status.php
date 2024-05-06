@@ -4,6 +4,7 @@
  */ 
 $id_val = isset($params['id']) ? $params['id'] : '';
 $type_val = isset($params['type']) ? $params['type'] : '';
+$origin_ext = json_decode(ORIGIN,true);
 ?>
 <div class="modal-dialog modal-xl">
 	<div class="modal-content">
@@ -16,6 +17,16 @@ $type_val = isset($params['type']) ? $params['type'] : '';
             	<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			</div>
 			<div class="modal-body">
+				<div class="row mb-3">
+					<div class="col-md-4 col-sm-6 col-xs-12">
+						<label class="form-label text-dark">Document Code</label>
+						<div><?= $revision_document['code']; ?></div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12">
+						<label class="form-label text-dark">Origin</label>
+						<div><?= $origin_ext[$revision_document['origin']]; ?></div>
+					</div>
+				</div>
 				<div class="row mb-3">
 					<div class="col-md-4 col-sm-6 col-xs-12">
 						<label class="form-label text-dark">Project</label>
@@ -42,6 +53,16 @@ $type_val = isset($params['type']) ? $params['type'] : '';
 					<div class="col-md-4 col-sm-6 col-xs-12">
 						<label class="form-label text-dark">Version Number</label>
 						<div><?= $revision_document['version_number']; ?></div>
+					</div>
+				</div>
+				<div class="row mb-3">
+					<div class="col-md-4 col-sm-6 col-xs-12">
+						<label class="form-label text-dark">Added Date</label>
+						<div><?= displayDate($revision_document['created_at']); ?></div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12">
+						<label class="form-label text-dark">Added By</label>
+						<div><?= $revision_document['username']; ?></div>
 					</div>
 				</div>
 				<div class="hr1"></div>

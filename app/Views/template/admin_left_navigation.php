@@ -92,27 +92,27 @@
                 </a>
             </li>
             <li class="side-nav-item">
-                <a href="<?= WEBROOT ?>client" class="side-nav-link">
-                    <i class="bi bi-people"></i>
-                    <span>Clients</span>
-                </a>
-            </li>
-            <li class="side-nav-item">
-                <a href="<?= WEBROOT ?>vendor" class="side-nav-link">
-                    <i class="bi bi-file-earmark-ruled"></i>
-                    <span>Vendors</span>
-                </a>
-            </li>
-            <li class="side-nav-item">
-                <a href="<?= WEBROOT ?>project" class="side-nav-link">
+                <a href="<?= WEBROOT ?>projects" class="side-nav-link">
                     <i class="bi bi-archive"></i>
                     <span>Projects</span>
                 </a>
             </li>
             <li class="side-nav-item">
                 <a href="<?= WEBROOT ?>documents" class="side-nav-link">
-                    <i class="bi bi-bank"></i>
+                    <i class="bi bi-files"></i>
                     <span>Documents</span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="<?= WEBROOT ?>vendor" class="side-nav-link">
+                    <i class="bi bi-person-up"></i>
+                    <span>Vendors</span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="<?= WEBROOT ?>client" class="side-nav-link">
+                    <i class="bi bi-people"></i>
+                    <span>Clients</span>
                 </a>
             </li>
             <!-- <li class="side-nav-item">
@@ -144,7 +144,7 @@
                     <ul class="side-nav-second-level">
                         <li><a href="<?= WEBROOT ?>documentType">Document Types</a></li>
                         <li><a href="<?= WEBROOT ?>documentPurposes">Document Purposes</a></li>
-                        <li><a href="<?= WEBROOT ?>documentRevision">Document Revisions</a></li>
+                        <li><a href="<?= WEBROOT ?>documentRevisions">Document Revisions</a></li>
                         <li><a href="<?= WEBROOT ?>documentStatus">Document Status</a></li>
                         <li><a href="<?= WEBROOT ?>discipline">Disciplines</a></li>
                     </ul>

@@ -146,28 +146,30 @@
                     left: 13px;
                     font-size: 20px;
                     z-index: 9;
-                    color: #2f3192;
+                    background: -webkit-linear-gradient(45deg, #ee1d24, #2f3192 75%);
+                    background-clip: border-box;
+                    background-clip: border-box;
+                    background-clip: border-box;
+                    background-clip: border-box;
+                    background-clip: border-box;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
                     }
                     .input-items input:focus, .input-items textarea:focus {
-                    border-color: #2f3192;
-                    }
-                    .login-btn {
-                    color: #fff;
-                    background-color: #2f3192;
-                    border-color: #292b8a;
-                    border-radius: 25px;
-                    }
-                    .login-btn:hover {
-                    color: #fff;
-                    background-color: #d61a20;
-                    border-color: #be171c;
+                    border-color: #802964;
                     }
                     .login-text {
-                    font-size: 28px;
+                    font-size: 30px;
                     text-align: start;
                     margin-bottom: 1.75rem;
                     color: #2f3192;
                     font-weight: 700;
+                    background: -webkit-linear-gradient(45deg, #ee1d24, #2f3192 25%);
+                    background-clip: border-box;
+                    background-clip: border-box;
+                    background-clip: border-box;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
                     }
                     .l-msg {
                     position: fixed;
@@ -205,7 +207,7 @@
                         align-items: center;
                     }
                     .login-img img {
-                        height: 936px;
+                        height: 100vh;
                         width: auto;
                     }
                     .login-col-padding .row {
@@ -249,10 +251,29 @@
                     }
                     .login-content-block {
                         background-color: #f9faff;
-                        height: 100%;
                         text-align: center;
                         border-left:1px solid #e6f3ff;
                         box-shadow: rgba(0,132,255, 0.2) 0px 7px 29px 0px;
+                        padding: 100px;
+                    }
+                    .login-btn {
+                        background-image: linear-gradient(to right, #EE1D24 0%, #2F3192 45%, #EE1D24 90%);
+                        margin: 10px;
+                        padding: 10px 45px;
+                        text-align: center;
+                        text-transform: uppercase;
+                        transition: 0.5s;
+                        background-size: 200% auto;
+                        color: white;            
+                        box-shadow: 0 0 20px #eee;
+                        border-radius: 35px;
+                        display: block;
+                    }
+
+                    .login-btn:hover {
+                        background-position: right center;
+                        color: #fff;
+                        text-decoration: none;
                     }
                 </style>
             </div>

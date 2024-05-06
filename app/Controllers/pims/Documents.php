@@ -152,6 +152,7 @@ class Documents extends BaseController
 		 		$doc_status_add = array(
 		 			'edms_document_revision_id' => $doc_revision_id,
 		 			'document_status_id' => 0,
+		 			'comments' => $this->request->getPost('description'),
 		 			'created_at' => date('Y-m-d H:i'),
 		 			'created_by' => $this->session->get('user')['id'],
 		 		);
@@ -181,7 +182,7 @@ class Documents extends BaseController
 	/**
 	 * To Edit Document
 	 */ 
-	public function editDocument()
+	/*public function editDocument()
 	{
 		$id = $this->request->getGet('id');
 		$data['projects'] = $this->projectsModel->find();
@@ -194,7 +195,7 @@ class Documents extends BaseController
 			$data['documents'][$doc_value['id']] = $doc_value;
 		}
 		return view('pims/documents/edit_edms_document', $data);
-	}
+	}*/
 
 	/**
 	 * To Verify Document
@@ -365,6 +366,7 @@ class Documents extends BaseController
 				$add_rev_doc_history = array(
 					'edms_document_revision_id' => $rev_doc_id,
 					'document_status_id' => 0,
+					'comments' => $this->request->getPost('description'),
 					'created_at' => date('Y-m-d H:i'),
 					'created_by' => $this->session->get('user')['id'],
 				);
@@ -408,10 +410,37 @@ class Documents extends BaseController
 		foreach($statusus as $s_k => $status_val) {
 			$data['status_list'][$status_val['id']] = $status_val;
 		}
-		$data['rev_doc_history_status'] = $this->documentRevisionHistoryModel->where('edms_document_revision_id', $data['edms_document']['revision_id'])->orderBy('id', 'desc')->find();
-		// print "<pre>";print_r($data['rev_doc_history_status']); print "</pre>";exit;
-		$data['revised_documents'] = $this->edmsDocumentRevisionsModel->where('edms_document_id', $id)->orderBy('id','desc')->find();
-		$data['revised_doc_total'] = $this->edmsDocumentRevisionsModel->where('edms_document_id', $id)->countAllResults();
+		$data['rev_doc_history_status'] = $this->documentRevisionHistoryModel->getDocumentRevStatusHistory($data['edms_document']['revision_id']);
+		$data['revised_documents'] = $this->edmsDocumentRevisionsModel->getDocumentRevisionsList($id);
+		$data['revised_doc_total'] = $this->edmsDocumentRevisionsModel->getDocumentRevisionsListNum($id);
+		$data['doc_history_status'] = $this->documentRevisionHistoryModel->getDocHistoryStatusList();
 		return view('pims/documents/view_documents', $data);
+	}
+
+	/**
+	 * To Delete the Document
+	 */ 
+	public function deleteDocument() 
+	{
+		$params = $this->request->getPost();
+		$documents_val = $this->edmsDocumentsModel->find($params['id']);
+		$doc_path = DOCUMENTROOT."edms_docs/".$documents_val['document'];
+		if(file_exists($doc_path) and !is_dir($doc_path)) {
+			unlink($doc_path);
+		}
+		$doc_revision_docs = $this->edmsDocumentRevisionsModel->where('edms_document_id', $params['id'])->find();
+		foreach($doc_revision_docs as $rev_id => $doc_rev_val) {
+			$doc_rev_path = DOCUMENTROOT."edms_docs/".$doc_rev_val['document'];
+			if(file_exists($doc_rev_path) and !is_dir($doc_rev_path)) {
+				unlink($doc_rev_path);
+			}
+		}
+		$this->edmsDocumentRevisionsModel->where('edms_document_id', $params['id'])->delete();
+		if($this->edmsDocumentsModel->where('id', $params['id'])->delete()) {
+			$alert = array('color' => 'success', 'msg' => 'Document Deleted Successfully');			
+		}else {
+			$alert = array('color' => 'danger', 'msg' => 'Error!! Please try again...');
+		}
+		return view('template/alert_modal', $alert);
 	}
 }

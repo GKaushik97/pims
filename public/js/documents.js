@@ -107,3 +107,13 @@ function viewDocument(id) {
 		loadModal(data);
 	});
 }
+
+// To Delete Document
+function deleteDocument(id) {
+	if(confirm("Are you sure you want to delete the document.")) {
+		$.post(WEBROOT + "documents/deleteDocument", {'id' : id}, function(data) {
+			loadModal(data);
+			resetDocumentsBody();
+		});
+	}
+}

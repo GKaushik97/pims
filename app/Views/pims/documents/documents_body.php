@@ -134,12 +134,8 @@ $internal_val = INTERNAL;
                         <td class="text-center"><span title="<?= $documents['status_name']; ?>"><?= $documents['status_code']; ?></span></td>
                         <td class="text-center"><span title="<?= $documents['approve_name']; ?>"><?= $documents['approve_code']; ?></span></td>
                         <td>
-                            <? if($documents['verify_status'] != '' and $documents['approve_status'] != ''){
-                                if($documents['status_code'] == $internal_val['code'] and $documents['approve_code'] == $client_val['code']) {
-                                    echo "<span class='text text-success'>Completed</span>";
-                                }else {
-                                    echo "<span class='text text-danger'>Completed</span>";
-                                }
+                            <? if($documents['status_code'] == $internal_val['code'] and $documents['approve_code'] == $client_val['code']){
+                                echo "completed";
                             }else {
                                 echo "In Process";
                             } ?>
@@ -171,7 +167,7 @@ $internal_val = INTERNAL;
                 <? }
             }else { ?>
                 <tr>
-                    <td colspan="12">
+                    <td colspan="15">
                         <div class="alert alert-danger">
                             No Records Found
                         </div>

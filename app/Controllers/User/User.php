@@ -68,8 +68,8 @@ class User extends BaseController
 	public function add()
 	{
 		$data['roles'] = $this->roleModel->find();
-		$data['vendors'] = $this->vendorModel->find();
-		$data['clients'] = $this->clientModel->find();
+		$data['vendors'] = $this->vendorModel->findAll();
+		$data['clients'] = $this->clientModel->findAll();
 		return view('user/users/user_add', $data);
 	}
 
@@ -88,10 +88,14 @@ class User extends BaseController
 				'email' => ['label' => 'Email', 'rules' => 'required|valid_email'],
 				'phone' => ['label' => 'Phone', 'rules' => 'required|min_length[10]|numeric'],
 				'user_type' => ['label' => 'User Type','rules' => 'required'],
-				'client_id' => ['label' => 'Client','rules' => 'required'],
-				'vendor_id' => ['label' => 'Vendor','rules' =>'required'],
 				'role' => ['label' => 'Role', 'rules' => 'required'],
 			);
+			if (isset($_POST['user_type']) and $_POST['user_type'] == 1) {
+				$rules['client'] = ['label' => 'Client','rules' => 'required'];
+			}
+			if (isset($_POST['user_type']) and $_POST['user_type'] == 2) {
+				$rules['vendor'] = ['label' => 'Vendor','rules' =>'required'];
+			}
 			$check = $this->validate($rules);
 			if($check == TRUE)
 			{
@@ -103,13 +107,12 @@ class User extends BaseController
 					'phone' => $this->request->getPost('phone'),
 					'role' => $this->request->getPost('role'),
 					'user_type' => $this->request->getPost('user_type'),
-					'client_id' => $this->request->getPost('client_id'),
-					'vendor_id' => $this->request->getPost('vendor_id'),
+					'client_id' => $this->request->getPost('client'),
+					'vendor_id' => $this->request->getPost('vendor'),
 					'status' => 1,
 					'created_by' => $this->session->get('user')['id'],
 					'created_at' => date('Y-m-d H:i'),
 				);
-				// print "<pre>"; print_r($add_user); print "</pre>";exit;
 				$this->userModel->insert($add_user);
 				$insert_user = $this->userModel->getInsertID();
 				$user_code = "U".str_pad($insert_user,4,"0",STR_PAD_LEFT);
@@ -127,6 +130,8 @@ class User extends BaseController
 			else 
 			{
 				$data['roles'] = $this->roleModel->find();
+				$data['clients'] = $this->clientModel->find();
+				$data['vendors'] = $this->vendorModel->find();
 				return view('user/users/user_add', $data);
 			}
 		}
@@ -144,6 +149,8 @@ class User extends BaseController
 	{
 		$id = $this->request->getGet('id');
 		$data['roles'] = $this->roleModel->find();
+		$data['vendors'] = $this->vendorModel->findAll();
+		$data['clients'] = $this->clientModel->findAll();
 		$data['user_details'] = $this->userModel->find($id);
 		return view('user/users/users_edit', $data);
 	}
@@ -161,7 +168,14 @@ class User extends BaseController
 				'email' => ['label' => 'Email', 'rules' => 'required|valid_email'],
 				'phone' => ['label' => 'Phone', 'rules' => 'required|min_length[10]|numeric'],
 				'role' => ['label' => 'Role', 'rules' => 'required'],
+				'user_type' => ['label' => 'UserType', 'rules' => 'required'],
 			);
+			if (isset($_POST['user_type']) and $_POST['user_type'] == 1) {
+				$rules['client'] = ['label' => 'Client','rules' => 'required'];
+			}
+			if (isset($_POST['user_type']) and $_POST['user_type'] == 2) {
+				$rules['vendor'] = ['label' => 'Vendor','rules' =>'required'];
+			}
 			$check = $this->validate($rules);
 			if($check == TRUE)
 			{
@@ -170,6 +184,8 @@ class User extends BaseController
 					'email' => $this->request->getPost('email'),
 					'phone' => $this->request->getPost('phone'),
 					'role' => $this->request->getPost('role'),
+					'client_id' => $this->request->getPost('client'),
+					'vendor_id' => $this->request->getPost('vendor'),
 					'status' => 1,
 					'updated_by' => $this->session->get('user')['id'],
 					'updated_at' => date('Y-m-d H:i'),
@@ -184,6 +200,8 @@ class User extends BaseController
 			else 
 			{
 				$data['roles'] = $this->roleModel->find();
+				$data['vendors'] = $this->vendorModel->findAll();
+				$data['clients'] = $this->clientModel->findAll();
 				return view('user/users/users_edit', $data);
 			}
 		}
@@ -225,5 +243,21 @@ class User extends BaseController
 			$alert = array('color' => 'danger', 'msg' => 'Error in Updating Password!');
 		}
 		return view('template/alert_modal', $alert);
+	}
+
+	/**
+	 * Get User Type
+	 */
+	public function getUsertype() 
+	{
+		$userType = $this->request->getPost('userType');
+		$data = array();
+		if($userType == '1') {
+			$data['clients'] = $this->clientModel->findAll();
+			return view('user/users/clients',$data);
+		} else if($userType == '2') {
+			$data['vendors'] = $this->vendorModel->findAll();
+			return view('user/users/vendors', $data);
+		}
 	}
 }

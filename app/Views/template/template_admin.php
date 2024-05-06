@@ -31,6 +31,7 @@
         <link rel="stylesheet" href="<? echo WEBROOT;?>bootstrap-5.3.2/icons/bootstrap-icons.css">
         <!-- menu css -->
         <link rel="stylesheet" type="text/css" href="<? echo WEBROOT;?>menu/css/theme.css" id="app-style">
+        <link rel="stylesheet" type="text/css" href="<? echo WEBROOT;?>menu/css/template_admin_theme.css">
         <?
         // Project CSS files
         if(isset($page['css'])) {

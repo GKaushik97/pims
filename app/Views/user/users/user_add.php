@@ -1,7 +1,8 @@
 <?php
 /**
  * Add Location
- */ 
+ */
+ $user_type_val = (isset($_POST['user_type']) and $_POST['user_type'] != '') ? $_POST['user_type'] : set_value('user_type'); 
 ?>
 <div class="modal-dialog modal-lg">
 	<div class="modal-content">
@@ -15,34 +16,24 @@
                 <div class="row mb-3">
                     <label class="col-sm-4 col-form-label text-end">User Type&nbsp;<span class="text-danger">*</span>&nbsp;:</label>
                     <div class="col-sm-6">
-                        <select class="form-select form-select-sm" name="user_type" id="user_type">
+                        <select class="form-select form-select-sm" name="user_type" id="user_type" onchange="userType(this.value)">
                             <option value="">Select</option>
-                            <option value="0">Internal</option>
-                            <option value="1">Client</option>
-                            <option value="2">Vendor</option>
+                            <option value="0" <? if($user_type_val == '0') { print "selected";} ?>>Internal</option>
+                            <option value="1" <? if($user_type_val == '1') { print "selected";} ?>>Client</option>
+                            <option value="2" <? if($user_type_val == '2') { print "selected";} ?>>Vendor</option>
                         </select>
                         <span class="text-danger"><small><?= validation_show_error('user_type'); ?></small></span>
                     </div>
                 </div>
-                <div class="row mb-3" id="client_data" style="display: none;">
-                    <label class="col-sm-4 col-form-label text-end">Client&nbsp;<span class="text-danger">*</span>&nbsp;:</label>
-                    <div class="col-sm-6">
-                        <select class="form-select form-select-sm" name="client" id="client">
-                            <?php foreach ($clients as $client): ?>
-                                <option value="<?= $client['id']; ?>"><?= $client['name']; ?></option>
-                            <?php endforeach; ?>
-                        </select>
-                    </div>
-                </div>
-                <div class="row mb-3" id="vendor_data" style="display: none;">
-                    <label class="col-sm-4 col-form-label text-end">Vendor&nbsp;<span class="text-danger">*</span>&nbsp;:</label>
-                    <div class="col-sm-6">
-                        <select class="form-select form-select-sm" name="vendor" id="vendor">
-                            <?php foreach ($vendors as $vendor): ?>
-                                <option value="<?= $vendor['id']; ?>"><?= $vendor['name']; ?></option>
-                            <?php endforeach; ?>
-                        </select>
-                    </div>
+                <div id="category">
+                    <?
+                    if ($user_type_val == 1) {
+                        echo view('user/users/clients');
+                    }
+                    elseif ($user_type_val == 2) {
+                        echo view('user/users/vendors');
+                    }
+                    ?>
                 </div>
                 <div class="row mb-3">
                     <label for="name" class="col-sm-4 col-form-label text-end">Name&nbsp;<span class="text-danger">*</span>&nbsp;:</label>
@@ -91,9 +82,13 @@
                     <div class="col-sm-6">
                         <select class="form-select form-select-sm" name="role" id="role">
                             <option value="">Select</option>
-                            <? foreach ($roles as $key => $value) { ?>
-                                <option value="<?= $value['id']; ?>"<? if($value['id'] == set_value('role')){ echo "selected";}?>><?= $value['name']; ?></option>
-                            <? } ?>
+                            <?
+                            if (isset($roles) and !empty($roles)) {   
+                                foreach ($roles as $key => $value) { ?>
+                                    <option value="<?= $value['id']; ?>"<? if($value['id'] == set_value('role')){ echo "selected";}?>><?= $value['name']; ?></option>
+                                <? 
+                                 } 
+                            } ?>
                         </select>
                         <span class="text-danger"><small><?= validation_show_error('role'); ?></small></span>
                     </div>
@@ -106,3 +101,19 @@
 		</form>
 	</div>
 </div>
+<script>
+    function userType(user_type) {
+        $.ajax({
+            url : WEBROOT + 'user/getUserType',
+            type : 'POST',
+            data : {'userType' : user_type},
+            dataType : 'html',
+            success : function(data) {
+                $('#category').html(data);
+            },
+            error: function(xhr,status,error) {
+                console.error(error);
+            }
+        });
+    }
+</script>

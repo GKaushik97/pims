@@ -3,8 +3,6 @@
  * Revised documents
  */
 $total_records = isset($revised_doc_total['total_records']) ? $revised_doc_total['total_records'] : '0';
-        // print "<pre>"; print_r($doc_history_status); print "</pre>";exit;
-
 ?>
 <div class="mb-1">
     <strong>(&nbsp;<?= $total_records." "."Records"; ?>&nbsp;)</strong>
@@ -14,7 +12,7 @@ $total_records = isset($revised_doc_total['total_records']) ? $revised_doc_total
         <thead>
             <tr>
                 <th width="1%" class="text-center">S.No.</th>
-                <th class="text-center">Document</th>
+                <th>Document</th>
                 <th>Document Purpose</th>
                 <th>Document Revision</th>
                 <th>Version Number</th>
@@ -36,7 +34,7 @@ $total_records = isset($revised_doc_total['total_records']) ? $revised_doc_total
                     <tr>
                         <td class="text-center"><? print $i++; ?></td>
                         <td class="text-center">
-                            <div class="fs-4"><?= displayFile($doc_val['document']); ?></div>
+                            <?= displayFile($doc_val['document']); ?>
                         </td>
                         <td><? print $document_purposes[$doc_val['document_purpose_id']]['name']; ?></td>
                         <td><? print $document_revisions[$doc_val['document_revision_id']]['name']; ?></td>
@@ -57,39 +55,12 @@ $total_records = isset($revised_doc_total['total_records']) ? $revised_doc_total
                         <td><?= isset($doc_val['user_name']) ? $doc_val['user_name'] : '--'; ?></td>
                         <td><?= isset($doc_val['updated_at']) ? displayDate($doc_val['updated_at']) : '--'; ?></td>
                         <td><?= isset($doc_val['updated_name']) ? $doc_val['updated_name'] : '--'; ?></td>
-                        <td><a class="btn btn-primary btn-sm" href="#" data-bs-toggle="collapse" data-bs-target="#collapseOne_<?= $doc_val['id']; ?>" aria-expanded="false" aria-controls="collapseOne"><i class="bi bi-eye"></i>&nbsp;View History</a></td>
+                        <td><a href="#" data-bs-toggle="collapse" data-bs-target="#collapseOne_<?= $doc_val['id']; ?>" aria-expanded="false" aria-controls="collapseOne">View History</a></td>
                     </tr>
                     <tr id="collapseOne_<?= $doc_val['id']; ?>" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <td colspan="12" class="accordion-body">
                             <div >
-                                <table class="table table-bordered mb-0">
-                                    <thead>
-                                        <tr>
-                                            <th width="1%" class="text-center">S.No</th>
-                                            <th>Document Revision ID</th>
-                                            <th>Document Status</th>
-                                            <th>Comments</th>
-                                            <th>Added Date</th>
-                                            <th>Added By</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?
-                                        $j = 1;
-                                        foreach($doc_history_status as $doc_key => $history_val) { 
-                                            if($doc_val['id'] == $history_val['edms_document_revision_id']) { ?>
-                                                <tr>
-                                                    <td class="text-center"><?= $j++; ?></td>
-                                                    <td><?= $history_val['edms_document_revision_id']; ?></td>
-                                                    <td><?= ($history_val['document_status_id'] > 0) ? $status_list[$history_val['document_status_id']]['name'] : '--'; ?></td>
-                                                    <td><?= $history_val['comments']; ?></td>
-                                                    <td><?= isset($history_val['created_at']) ? displayDate($history_val['created_at']) : ''; ?></td>
-                                                    <td><?= isset($history_val['username']) ? $history_val['username'] : ''; ?></td>
-                                                </tr>
-                                            <? }
-                                         } ?>
-                                    </tbody>
-                                </table>
+                                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
                             </div>
                         </td>
                     </tr>
